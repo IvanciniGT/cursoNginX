@@ -12,3 +12,5 @@ services:
                       - /home/ubuntu/environment/curso/configuraciones/sitio1/nginx.conf:/etc/nginx/nginx.conf
                         # Que mi nginx tenga acceso a mi sitio WEB
                       - /home/ubuntu/environment/curso/sitiosweb/sitio1:/sitios/sitio1
+                        # Que mi nginx tenga acceso a mi carpeta de los videos
+                      - /home/ubuntu/environment/curso/sitiosweb/videos:/datos/videos
