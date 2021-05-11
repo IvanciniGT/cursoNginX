@@ -38,3 +38,5 @@ git < Linus Torwalds
     --------------------------------------------------------------
     Gitlab          SaaS , OnPremises  < Opensource
     Bitbucket       Jira (Atlassian)
+
+Git funciona muy bien
