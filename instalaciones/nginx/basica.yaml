@@ -1,0 +1,10 @@
+version: "3.0"
+
+services:
+    nginx:
+        image:          nginx
+        container_name: ejemplo_nginx_1
+        ports:
+                      - 8080:80
+        volumes:
+                      - /home/ubuntu/environment/curso/configuraciones/miconfiguracion.ejemplo:/tmp/prueba.conf
