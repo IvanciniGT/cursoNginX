@@ -1,0 +1,22 @@
+version: "3.0"
+
+services:
+    app1_1:
+        image:          nginx
+        container_name: app1_1
+        ports:
+                      - 8082:80
+        volumes:
+                        # Sobreescribo el archivo de configuración que viene por defecto dentro de la imagen del contenedor de nginx
+                        # Pongo mi propio archivo de configuración
+                      - /home/ubuntu/environment/curso/configuraciones/app1/nginx.conf:/etc/nginx/nginx.conf
+                        # Que mi nginx tenga acceso a mi app WEB
+                      - /home/ubuntu/environment/curso/sitiosweb/app1_1:/app1
+    app1_2:
+        image:          nginx
+        container_name: app1_2
+        ports:
+                      - 8083:80
+        volumes:
+                      - /home/ubuntu/environment/curso/configuraciones/app1/nginx.conf:/etc/nginx/nginx.conf
+                      - /home/ubuntu/environment/curso/sitiosweb/app1_2:/app1

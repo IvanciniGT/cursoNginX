@@ -152,5 +152,4 @@ INSTRUCCIONES ESPECIALES
 Parentesis :
     - Agrupar
     - Capturar trozos de texto
-            
-            
+   
