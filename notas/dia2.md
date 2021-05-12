@@ -102,3 +102,55 @@ Kubernetes lo podeis montar en 1 unico ordenador con 4 cpus y 8 gbs de ram
 
 >>> Minikube
 --------------
+
+
+----------------------------
+EXPRESIONES REGULARES PERL
+----------------------------
+URL: https://regex101.com/
+
+Se basan en el concepto de PATRON.
+PATRON es unas reglas que se pueden cumplir o no.
+
+Las expresiones regular nos permiten hacer operaciones de tipo MATCH sobre un PATRON
+
+OBJETIVO: Quiero ver si un texto cumple (match) un determinado PATRON
+
+TEXTO: En un lugar de la Mancha en el año 2021 vívia un hidalgo CABALLERO.
+
+PATRON: Tiene números                             SI
+PATRON: Empieza por números                       NO
+PATRON: tiene entre 2 y 6 números seguidos        SI
+
+PATRON: GRUPO DE CARACTERES, a los que se aplica un FACTOR DE REPETICION:
+            En un lugar     - literal
+            [íóú]           - Uno de esos caracteres 
+            [a-z]           - Uno de los caracteres entre la a y la z
+            [a-zñáéíóúç]    - Uno de los caracteres entre la a y la z o la á é í ó ú ñ y ç
+            [A-Za-z0-9]
+            .               - Cualquier caracter. Ej: En un l.gar
+            \s              - Cualquier caracter considera un blanco: ESPACIO, SALTO DE LINEA o UN TABULADOR
+            
+FACTOR DE REPETICION
+            ?               - Opcional. El grupo de caracteres anterior puede aparecer o no
+                                        En un (gran)? lugar de la Mancha
+            *               - Opcional o infinito
+            +               - Al menos 1 y a partir de ahí las que quiera
+            {3}             - 3 veces tiene que aparecer
+            {2,5}           - INTERVALO : De 2 a 5 veces
+    
+BARRA VERTICAL:
+    |                       Se interpreta como un "O", sobre lo que haya alrededor
+            a|b                 Que aparezca el caracter a o el b
+                                    Equivalente a [ab]
+            hola|adios      Que ponga hola o adios
+            hola+|adios
+            
+INSTRUCCIONES ESPECIALES
+            ^               Comienza por
+            $               Acaba por
+Parentesis :
+    - Agrupar
+    - Capturar trozos de texto
+            
+            

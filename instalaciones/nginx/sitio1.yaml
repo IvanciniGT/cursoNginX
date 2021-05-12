@@ -13,4 +13,4 @@ services:
                         # Que mi nginx tenga acceso a mi sitio WEB
                       - /home/ubuntu/environment/curso/sitiosweb/sitio1:/sitios/sitio1
                         # Que mi nginx tenga acceso a mi carpeta de los videos
-                      - /home/ubuntu/environment/curso/sitiosweb/videos:/datos/videos
+                      - /home/ubuntu/environment/curso/sitiosweb/sitio1:/datos/videos
