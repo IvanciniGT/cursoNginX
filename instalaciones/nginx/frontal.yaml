@@ -7,6 +7,8 @@ services:
         ports:
                       - 8085:80
                       - 8086:81
+                      - 8090:82
+                      - 8091:83 
         volumes:
                         # Sobreescribo el archivo de configuración que viene por defecto dentro de la imagen del contenedor de nginx
                         # Pongo mi propio archivo de configuración
@@ -23,5 +25,17 @@ services:
                         # Sobreescribo el archivo de configuración que viene por defecto dentro de la imagen del contenedor de nginx
                         # Pongo mi propio archivo de configuración
                       - /home/ubuntu/environment/curso/configuraciones/frontal/nginx.v2.conf:/etc/nginx/nginx.conf
+                        # Que mi nginx tenga acceso a mi sitio WEB
+                      - /home/ubuntu/environment/curso/sitiosweb/frontal:/frontal
+
+    frontal3:
+        image:          nginx
+        container_name: frontal3
+        ports:
+                      - 8088:80
+        volumes:
+                        # Sobreescribo el archivo de configuración que viene por defecto dentro de la imagen del contenedor de nginx
+                        # Pongo mi propio archivo de configuración
+                      - /home/ubuntu/environment/curso/configuraciones/frontal/nginx.v3.conf:/etc/nginx/nginx.conf
                         # Que mi nginx tenga acceso a mi sitio WEB
                       - /home/ubuntu/environment/curso/sitiosweb/frontal:/frontal
