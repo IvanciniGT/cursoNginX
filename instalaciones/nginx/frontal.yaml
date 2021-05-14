@@ -7,7 +7,7 @@ services:
         ports:
                       - 8085:80
                       - 8086:81
-                      - 8090:82
+                      - 8090:8090
                       - 8091:83 
         volumes:
                         # Sobreescribo el archivo de configuración que viene por defecto dentro de la imagen del contenedor de nginx
